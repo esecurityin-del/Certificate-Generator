@@ -50,7 +50,7 @@ const NAME_CONFIG   = { xPercent: 11.6, yPercent: 50, fontSize: 28, font: 'helve
 const SHOW_DATE      = false;
 const DATE_CONFIG   = { xPercent: 22, yPercent: 88, fontSize: 11, font: 'courier', style: 'normal', color: [220, 230, 240], align: 'center' };
 const SHOW_CERT_ID   = true;
-const CERTID_CONFIG = { xPercent: 82, yPercent: 35, fontSize: 11, font: 'helvetica', style: 'normal', color: [50, 50, 50], align: 'center' };
+const CERTID_CONFIG = { xPercent: 82, yPercent: 90, fontSize: 11, font: 'helvetica', style: 'normal', color: [255, 255, 255], align: 'center' };
 
 /* ---------------- unique participant ID ---------------- */
 function generateUniqueId(){
