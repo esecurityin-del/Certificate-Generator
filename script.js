@@ -133,7 +133,20 @@ function generateCertificatePDF(participantName, certId){
 // text (anti-spam measure) — there is no working URL parameter for this anymore.
 // The reliable workaround: copy the caption to the clipboard, then open LinkedIn's
 // post composer, so the participant just pastes it in.
-const LINKEDIN_POST_CAPTION = "Thrilled to share that I have successfully completed an insightful training session on Cybersecurity, hosted by [Company Name/Host]! 🛡️As digital threats become more sophisticated, staying ahead of the curve is crucial. This session provided valuable insights into [mention 1-2 topics, e.g., threat detection, data privacy, or incident response], reinforcing the importance of proactive security measures in today's digital landscape.A big thank you to the organizers and speakers for an engaging and informative session. Excited to apply these learnings to my work!#Cybersecurity #ContinuousLearning #ProfessionalDevelopment #DataProtection #InformationSecurity";
+const LINKEDIN_POST_CAPTION = (participantName) => `
+Thrilled to share that I have successfully completed an insightful
+Cybersecurity training session with eSecurityIn! 🛡️
+
+The session provided valuable insights into cybersecurity and the
+importance of staying ahead of today's evolving digital threats.
+
+Grateful to the organizers and speakers for an engaging and
+informative learning experience. Looking forward to applying
+these learnings in my professional journey!
+
+#Cybersecurity #ContinuousLearning #ProfessionalDevelopment
+#InformationSecurity #eSecurityIn
+`;
 const LINKEDIN_COMPOSE_URL = 'https://www.linkedin.com/feed/?shareActive=true';
 
 /* ---------------- certificate viewer window (preview + download + LinkedIn) ---------------- */
