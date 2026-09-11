@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eSecurityIn - CyberSecurity Seminar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+<div class="vignette"></div>
+
+<div class="card">
+  <div class="panel-head">
+    <img src="logo.png" alt="eSecurityIn logo" class="panel-logo">
+    <!-- <span class="panel-title">eSecurityIn</span> -->
+  </div>
+  <div class="card-body">
+    <div class="eyebrow">Application Form</div>
+    <h1>CyberSecurity Seminar</h1>
+    <p class="sub">Enter details below to generate your certificate.</p>
+
+    <form id="regForm" novalidate>
+      <div class="field" data-field="name">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Aditi Sharma">
+        <div class="field-error">Enter your full name.</div>
+      </div>
+
+      <div class="field" data-field="phone">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+        <div class="field-error">Enter a valid phone number.</div>
+      </div>
+
+      <div class="field" data-field="email">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@domain.com">
+        <div class="field-error">Enter a valid email address.</div>
+      </div>
+
+      <div class="field" data-field="courseInterest">
+        <label for="courseInterest">Interested in joining the course?</label>
+        <select id="courseInterest" name="courseInterest">
+          <option value="">Select one</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <div class="field-error">Please select an option.</div>
+      </div>
+
+      <div class="field" data-field="sessionRating">
+        <div class="star-row">
+          <label>How did you like the session?</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="sessionRating" value="5"><label for="star5" title="5 stars">★</label>
+            <input type="radio" id="star4" name="sessionRating" value="4"><label for="star4" title="4 stars">★</label>
+            <input type="radio" id="star3" name="sessionRating" value="3"><label for="star3" title="3 stars">★</label>
+            <input type="radio" id="star2" name="sessionRating" value="2"><label for="star2" title="2 stars">★</label>
+            <input type="radio" id="star1" name="sessionRating" value="1"><label for="star1" title="1 star">★</label>
+          </div>
+        </div>
+        <div class="field-error">Please rate the session.</div>
+      </div>
+
+      <div class="field" data-field="remarks">
+        <label for="remarks">Remarks</label>
+        <textarea id="remarks" name="remarks" rows="3" placeholder="Share your thoughts on the session..."></textarea>
+        <div class="field-error">Please enter your remarks.</div>
+      </div>
+
+      <label class="consent">
+        <input type="checkbox" id="consent">
+        I consent to my details being recorded for the workshop.
+      </label>
+
+      <button type="submit" class="btn-primary" id="submitBtn">&gt; SUBMIT </button>
+      <div id="formMsg"></div>
+    </form>
+    <!--<div class="footnote">SESSION SECURED · DATA SENT DIRECTLY TO GOOGLE SHEETS</div>-->
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
