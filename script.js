@@ -202,7 +202,7 @@ function openCertificateWindow(blobUrl, certId, participantName){
       <p class="hint" id="liHint">Downloads your certificate, copies a ready-made caption, then opens LinkedIn — just attach the downloaded file and paste (Ctrl/Cmd+V) the caption into your post.</p>
       <script>
         document.getElementById('liShareBtn').addEventListener('click', async function(){
-          const caption = ${JSON.stringify(LINKEDIN_POST_CAPTION)};
+          const caption = LINKEDIN_POST_CAPTION(participantName);
           const hint = document.getElementById('liHint');
           try{
             await navigator.clipboard.writeText(caption);
