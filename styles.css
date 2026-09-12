@@ -36,7 +36,7 @@
     overflow:hidden;
   }
   .panel-head{display:flex; align-items:center; gap:8px; padding:13px 18px; border-bottom:1px solid var(--line); background:rgba(255,255,255,0.015);}
-  .panel-logo{width:400px; height:auto; margin-left:0; object-fit:contain; padding:10px;}
+  .panel-logo{width:auto; height:auto; margin-left:0; object-fit:contain; padding:10px;}
   .dot{width:9px; height:9px; border-radius:50%; display:inline-block;}
   .dot.red{background:var(--red);} .dot.amber{background:#ffb020;} .dot.green{background:var(--green);}
   .panel-title{font-family:var(--mono); font-size:40px; color:var(--text-dim); margin-left:2px;}
